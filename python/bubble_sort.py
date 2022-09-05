@@ -1,6 +1,6 @@
 import numpy as np
 
-def bubble_sort(nums):
+def bubble_sort(nums):  # O(n**2)/O(1)
     n = len(nums)
     for i in range(n):
         for j in range(n - i - 1):
