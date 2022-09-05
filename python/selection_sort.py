@@ -1,4 +1,6 @@
 import numpy as np
+import pytest
+
 
 def selection_sort(nums):  # O(n**2)/O(1)
     n = len(nums)
@@ -11,6 +13,13 @@ def selection_sort(nums):  # O(n**2)/O(1)
             nums[i], nums[min_i] = nums[min_i], nums[i]
 
     return nums
+
+
+def test_sort():
+    for i in range(1000):
+        nums = list(np.random.randint(0, 1000, size=50))
+        assert sorted(nums) == selection_sort(nums)
+    return
 
 
 if __name__ == '__main__':
